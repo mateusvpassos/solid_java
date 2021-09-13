@@ -1,2 +1,4 @@
-# solid_java
- 
+# SOLID
+- Cohesion
+- Encapsulation
+- Coupling
