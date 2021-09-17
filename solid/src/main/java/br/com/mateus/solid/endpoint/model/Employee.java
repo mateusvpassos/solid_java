@@ -24,6 +24,10 @@ public class Employee {
         this.lastReadjustDate = LocalDate.now();
     }
 
+    public void promote(Role newRole) {
+        this.role = newRole;
+    }
+
     public String getName() {
         return name;
     }
@@ -71,4 +75,5 @@ public class Employee {
     public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
+
 }
