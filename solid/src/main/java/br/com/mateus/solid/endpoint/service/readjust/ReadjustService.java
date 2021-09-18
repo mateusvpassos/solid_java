@@ -17,7 +17,7 @@ public class ReadjustService {
 
         this.validations.forEach(val -> val.validate(employee, raise));
 
-        BigDecimal adjustedSalary = employee.getSalary().add(raise);
+        BigDecimal adjustedSalary = employee.getPersonalData().getSalary().add(raise);
         employee.attSalary(adjustedSalary);
     }
 }

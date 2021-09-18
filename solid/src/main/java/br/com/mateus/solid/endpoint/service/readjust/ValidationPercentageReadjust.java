@@ -8,7 +8,7 @@ import br.com.mateus.solid.endpoint.model.Employee;
 
 public class ValidationPercentageReadjust implements ValidationReadjust{
     public void validate(Employee employee, BigDecimal raise){
-        BigDecimal salaryNow = employee.getSalary();
+        BigDecimal salaryNow = employee.getPersonalData().getSalary();
         BigDecimal readjustPercentage = raise.divide(salaryNow, RoundingMode.HALF_UP);
         if(readjustPercentage.compareTo(new BigDecimal("0.4")) > 0){
             throw new ValidationException("Readjust cannot be superior to 40% of the salary!");

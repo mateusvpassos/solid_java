@@ -7,7 +7,7 @@ import br.com.mateus.solid.endpoint.model.Role;
 public class ValidationManagerPromotion implements ValidationPromotion{
 
     public void validate(Employee employee, Boolean goalAchieved) {
-        if(employee.getRole() == Role.MANAGER){
+        if(employee.getPersonalData().getRole() == Role.MANAGER){
             throw new ValidationException("Managers cannot be promoted");
         }
     }

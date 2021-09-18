@@ -8,7 +8,7 @@ public class ValidationGoalPromotion implements ValidationPromotion{
 
     public void validate(Employee employee, Boolean goalAchieved) {
         if(goalAchieved){
-            Role newRole = employee.getRole().nextRole();
+            Role newRole = employee.getPersonalData().getRole().nextRole();
             employee.promote(newRole);
         }else{
             throw new ValidationException("Goal did not be achieved");
